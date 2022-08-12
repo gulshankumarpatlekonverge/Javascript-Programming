@@ -2,7 +2,7 @@
 let count = 0;
 // console.log(count);
 
-//onClick Listener implementation
+//onClick Listener implementation for Button Click Counter
 
 function increment(){
     console.log("The button is clicked.");
@@ -12,24 +12,13 @@ function increment(){
     console.log(count);
 }
 
+//first function
 
+function helloWorld(){
+    console.log(42);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+helloWorld();
 
 
 /*
@@ -55,4 +44,15 @@ console.log(bonusPoints);
 
 bonusPoints = bonusPoints + 45;
 console.log(bonusPoints);
+
+function countdown(){
+    console.log(5);
+    console.log(4);
+    console.log(3);
+    console.log(2);
+    console.log(1);
+}
+
+countdown();
+
 */
