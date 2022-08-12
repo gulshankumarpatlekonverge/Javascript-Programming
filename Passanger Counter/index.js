@@ -1,28 +1,35 @@
 // document.getElementById("count-element").innerText = "10";
 let count = 0;
+let countElement = document.getElementById("count-element")
+
 // console.log(count);
 
 //onClick Listener implementation for Button Click Counter
+    // console.log("The button is clicked.");
+    // count = count + 1;
+    // document.getElementById("count-element").innerText = count;
+    // document.getElementById("count-element").innerText = count++;
 
-function increment(){
-    console.log("The button is clicked.");
-    //count = count + 1;
-    //document.getElementById("count-element").innerText = count;
-    //document.getElementById("count-element").innerText = count++;
-    
+function increment(){    
     // solution by course
-    let countEl = document.getElementById("count-element")
-    count = count + 1;
-    countEl.innerText = count;
+  
+    count +=  1;
+    countElement.innerText = count;
    
-    console.log(count);
+    // console.log(count);
 }
-
+    // saveElement.innerText += countData;
+    // Google search: innerText alternative on MDN 
 function save(){
-    console.log("under save function.");
-    console.log(count);
+    let saveElement = document.getElementById("save-element")
+    let countData = count + " - ";
+    saveElement.textContent +=  countData; //alternative of innertext to show hidden text i.e. innerText is used to show human-readable code
+    countElement.textContent = 0;
+    count = 0;
 }
 
+/*
+Example during explanantion
 //first function
 
 function helloWorld(){
@@ -61,8 +68,7 @@ incrementLapsCompleted();
 
 console.log(lapsCompleted);
 
-/*
-Example during explanantion
+
 console.log(myAge); //Reference Error: can't access myAge before initialization
 
 let myAge = 25;
@@ -95,7 +101,6 @@ function countdown(){
 
 countdown();
 
-*/
 let username = "Captain Jack Sparrow";
 
 console.log(username);
@@ -124,3 +129,6 @@ console.log(4 + 5); //9
 console.log("2" + "4"); //24
 console.log("5" + 1); //51
 console.log(100 + "100"); //1000 
+
+
+*/
