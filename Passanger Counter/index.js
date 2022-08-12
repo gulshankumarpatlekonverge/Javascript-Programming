@@ -8,13 +8,18 @@ function increment(){
     console.log("The button is clicked.");
     //count = count + 1;
     //document.getElementById("count-element").innerText = count;
-     document.getElementById("count-element").innerText = count++;
+    //document.getElementById("count-element").innerText = count++;
     
     // solution by course
-    // let countEl = document.getElementById("count-element")
-    // count = count + 1;
-    // countEl.innerText = count;
+    let countEl = document.getElementById("count-element")
+    count = count + 1;
+    countEl.innerText = count;
    
+    console.log(count);
+}
+
+function save(){
+    console.log("under save function.");
     console.log(count);
 }
 
@@ -91,3 +96,31 @@ function countdown(){
 countdown();
 
 */
+let username = "Captain Jack Sparrow";
+
+console.log(username);
+
+let message = "You have three new notifications"
+
+console.log(username + ", " + message );
+
+let messageToUser = message + ", " + username + ",";
+
+console.log(messageToUser);
+
+let myname = "Gulshankumar";
+let greeting = "Hi, My name is ";
+
+let myGreeting = greeting + " " + myname;
+console.log(myGreeting);
+
+let points = 4;
+let bonusPoints = "10";
+
+let totalPoints = points + bonusPoints;
+console.log(totalPoints); // 410 converts number into string
+
+console.log(4 + 5); //9
+console.log("2" + "4"); //24
+console.log("5" + 1); //51
+console.log(100 + "100"); //1000 
