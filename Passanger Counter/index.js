@@ -8,8 +8,13 @@ function increment(){
     console.log("The button is clicked.");
     //count = count + 1;
     //document.getElementById("count-element").innerText = count;
-    document.getElementById("count-element").innerText = count++;
+     document.getElementById("count-element").innerText = count++;
     
+    // solution by course
+    // let countEl = document.getElementById("count-element")
+    // count = count + 1;
+    // countEl.innerText = count;
+   
     console.log(count);
 }
 
