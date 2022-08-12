@@ -34,6 +34,21 @@ function logSum(){
 
 logSum()
 
+// Function that increments
+
+let lapsCompleted = 0;
+
+function incrementLapsCompleted(){
+  
+    lapsCompleted +=1;
+
+}
+
+incrementLapsCompleted();
+incrementLapsCompleted();
+incrementLapsCompleted();
+
+console.log(lapsCompleted);
 
 /*
 Example during explanantion
