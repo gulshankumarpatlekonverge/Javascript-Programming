@@ -1,0 +1,27 @@
+body{
+    background-color: azure;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+label{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: fantasy;
+    background-color: aqua;
+    height: 40px;
+    width: 40px;
+    padding: 20px;
+}
+
+button{
+    margin-top: 50px;
+    font-size: 30px;
+}
