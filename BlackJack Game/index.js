@@ -17,8 +17,12 @@ var cardsEl = document.getElementById("card-el");
 // DOM - querySelector(".----") using class attribute in html
 // var sumEl = document.querySelector(".sum-el");
 
-function startGame(newCard){
-    let newCards = newCard;
+function startGame(){
+    renderGame();
+}
+
+function renderGame(newCard){
+    let newCards = newCard || 0;
 
     if(sum <= 20){ 
         message = "Do you want to draw new card?";
@@ -37,5 +41,5 @@ function startGame(newCard){
 function addNewCard(){
     var newCard = 6;
     sum += newCard;
-    startGame(newCard);
+    renderGame(newCard);
 }
