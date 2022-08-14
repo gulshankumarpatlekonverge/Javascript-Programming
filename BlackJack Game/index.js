@@ -36,7 +36,12 @@ function renderGame(){ //newCard in the parameter
     messageEl.textContent = message;
     sumEl.textContent = "Sum : "+ sum;
     // cardsEl.textContent = "Cards : " + firstCard +" "+ secondCard + " " + newCards; 
-    cardsEl.textContent = "Cards : " + cards[0]+" "+ cards[1];   
+    // cardsEl.textContent = "Cards : " + cards[0]+" "+ cards[1];   // array implementation
+    
+    cardsEl.textContent = "Cards : ";
+    for(let i = 0; i < cards.length; i++){
+        cardsEl.textContent +=  cards[i] + " ";
+    }
 }
 
 function addNewCard(){
@@ -46,4 +51,3 @@ function addNewCard(){
     // renderGame(newCard);
     renderGame();
 }
-console.log(cards)

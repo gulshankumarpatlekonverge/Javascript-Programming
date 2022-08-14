@@ -106,3 +106,21 @@ console.log(describe);
 describe.slice(0, -1);
 console.log(describe);
 // [ 'Gulshankumar Kuwarlal Patle', 13 ]
+
+// for loop in JavaScript
+//      START         FINISH     STEP SIZE  
+for(let count = 1; count < 21; count +=1){
+    console.log(count);
+}
+
+for( let number= 10; number <= 100; number += 10){
+    console.log(number);
+}
+
+for(let i = 0; i < describe.length; i++){
+    console.log(describe[i]);
+}
+
+for (let i = 0; i < cards.length; i++){
+    console.log(cards[i]);
+}
