@@ -1,5 +1,5 @@
-var firstCard = 10;
-var secondCard = 5;
+var firstCard = getRandomCards();
+var secondCard = getRandomCards();
 var cards = [firstCard, secondCard];
 var hasBlackJack = false;
 var isAlive = true;
@@ -19,6 +19,10 @@ var cardsEl = document.getElementById("card-el");
 
 function startGame(){
     renderGame();
+}
+
+function getRandomCards(){
+    return 5;
 }
 
 function renderGame(){ //newCard in the parameter
@@ -45,7 +49,7 @@ function renderGame(){ //newCard in the parameter
 }
 
 function addNewCard(){
-    var newCard = 6;
+    var newCard = getRandomCards();
     sum += newCard;
     cards.push(newCard);
     // renderGame(newCard);

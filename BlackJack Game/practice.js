@@ -124,3 +124,29 @@ for(let i = 0; i < describe.length; i++){
 for (let i = 0; i < cards.length; i++){
     console.log(cards[i]);
 }
+
+let player1Time = 102;
+let player2Time = 107;
+
+
+function getFastestRaceTime(){
+    if(player1Time < player2Time){
+        return player1Time;
+        // console.log(player1Time);
+    } else if(player2Time < player1Time) {
+        return player2Time;
+        // console.log(player2Time);
+    } else{
+        return player1Time;
+        // console.log(player1Time);
+    }
+}
+
+let fastestRace = getFastestRaceTime();
+console.log(fastestRace); // when we use console.log() in if else the O/P = 102 undefined
+
+function totalRaceTime(){
+    return player1Time + player2Time;
+} 
+let raceTime = totalRaceTime();
+console.log(raceTime);
