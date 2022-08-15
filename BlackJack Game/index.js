@@ -1,11 +1,13 @@
-var firstCard = getRandomCards();
-var secondCard = getRandomCards();
-var cards = [firstCard, secondCard];
+// var firstCard = getRandomCards();
+// var secondCard = getRandomCards();
+// var cards = [firstCard, secondCard];
+var cards = []
 var hasBlackJack = false;
-var isAlive = true;
+var isAlive = false;
 
 var message = "";
-var sum = firstCard + secondCard;
+// var sum = firstCard + secondCard;
+var sum = 0;
 
 var messageEl = document.getElementById("message-el");
 var sumEl = document.getElementById("sum-el");
@@ -17,12 +19,28 @@ var cardsEl = document.getElementById("card-el");
 // DOM - querySelector(".----") using class attribute in html
 // var sumEl = document.querySelector(".sum-el");
 
-function startGame(){
-    renderGame();
+function getRandomCards(){
+    let randomCards = Math.floor(Math.random() * 13) + 1;
+    
+    if(randomCards === 1){
+        return 11;
+    } else if(randomCards > 10){
+        return 10;
+    } else{
+        return randomCards;
+    }
 }
 
-function getRandomCards(){
-    return 5;
+function startGame(){
+    //renderGame();
+    isAlive = true;
+
+    var firstCard = getRandomCards();
+    var secondCard = getRandomCards();
+    cards = [firstCard, secondCard];
+
+    sum = firstCard + secondCard;
+    renderGame();
 }
 
 function renderGame(){ //newCard in the parameter
@@ -49,9 +67,11 @@ function renderGame(){ //newCard in the parameter
 }
 
 function addNewCard(){
-    var newCard = getRandomCards();
-    sum += newCard;
-    cards.push(newCard);
-    // renderGame(newCard);
-    renderGame();
+    if(isAlive === true && hasBlackJack === false){
+        var newCard = getRandomCards();
+        sum += newCard;
+        cards.push(newCard);
+        // renderGame(newCard);
+        renderGame();
+    }
 }
