@@ -150,3 +150,71 @@ function totalRaceTime(){
 } 
 let raceTime = totalRaceTime();
 console.log(raceTime);
+
+let randomNumber = Math.random() * 6;  // generates Random Numbers between 0 and 1(not inclusive of 1) using the function 
+console.log(randomNumber);
+
+floorednumber = Math.floor(2.90610964701563); // return removes decimal number 
+console.log(floorednumber);
+
+let randomNumberUsingFloor = Math.floor(Math.random() * 6);  // return from 0 to 5
+console.log(randomNumberUsingFloor);
+
+let randomNumbersUsingFloor = Math.floor(Math.random() * 6) + 1;  // return from 0 to 5
+console.log(randomNumbersUsingFloor); // return number between 1 to 6
+
+function rollDice(){
+    let rollDiceRandomly = Math.floor(Math.random() * 6) + 1;
+    return rollDiceRandomly;
+}
+console.log(rollDice());
+
+// logical operators => AND 
+
+let hasCompletedCourse = true;
+let givesCertificate = true;
+
+// using nested if statements
+// if(hasCompletedCourse === true){
+//     if(givesCertificate === true){
+//         generateCertificate();
+//     }
+// }
+
+if(hasCompletedCourse === true && givesCertificate === true){  
+        generateCertificate();
+}
+
+// we can also acheve this using adding variables directly into cindition block in if statement
+// if(hasCompletedCourse && givesCertificate){  
+//     generateCertificate();
+// }
+
+function generateCertificate(){
+    console.log("Generating Certificate...");
+}
+
+
+let hasSolvedChallenge = false; //place true
+let hasHintLeft = false;
+
+if(hasSolvedChallenge === false && hasHintLeft === false){
+    showSolution();
+}
+
+function showSolution(){
+    console.log("Showing the solution...");
+}
+
+// logical OR operator
+
+let likesDocumentries = true;
+let likesStartups = false;
+
+if(likesDocumentries === true || likesStartups === true){
+    recommendMovie();
+}
+
+function recommendMovie(){
+    console.log("Hey, Check out this new film we think you will like!");
+}
