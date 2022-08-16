@@ -12,7 +12,19 @@ var sum = 0;
 var messageEl = document.getElementById("message-el");
 var sumEl = document.getElementById("sum-el");
 var cardsEl = document.getElementById("card-el");
+var playerEl = document.getElementById("player-el");
 
+// objects in JavScript
+// var playerName = "Gulshankumar";
+// var playerChips = 200;
+// playerEl.textContent = playerName + " : $" + playerChips;
+
+var player = {
+    name: "Gulshankumar",
+    chips: 200
+}
+
+playerEl.textContent = player.name + " : $"+ player.chips;
 // DOM - querySelector("#...") using id attribute in html
 // var sumEl = document.querySelector("#sum-el");
 

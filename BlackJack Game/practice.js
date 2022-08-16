@@ -218,3 +218,38 @@ if(likesDocumentries === true || likesStartups === true){
 function recommendMovie(){
     console.log("Hey, Check out this new film we think you will like!");
 }
+
+
+// JS Object Implementation
+
+let course ={
+    title: "Learn CSS Grid for Free",
+    lessons: 16,
+    creator: "ASDF",
+    length: 63,
+    level: 2,
+    isFree: true,
+    tags: ["html", "css"]
+}
+
+console.log(course["tags"]);
+console.log(course["lessons"]);
+console.log(course["level"]);
+console.log(course["title"]);
+
+console.log(course.tags);
+console.log(course.lessons);
+console.log(course.level);
+console.log(course.title);
+
+let airbnbCastleList = {
+    place: "Hotel Heritage Blue",
+    rent: 400,
+    isPremium: true,
+    facility: ["AC Room", "Dual Bed", "Master Room"]
+}
+
+console.log(airbnbCastleList.place);
+console.log(airbnbCastleList.rent);
+console.log(airbnbCastleList.isPremium);
+console.log(airbnbCastleList.facility);
