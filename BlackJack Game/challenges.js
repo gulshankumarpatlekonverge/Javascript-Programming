@@ -116,3 +116,18 @@ function sortFruits(){
 }
 
 sortFruits();
+
+let emojiPicker = ["🐉", "🐥", "🐊","💩", "🦍", "🐢", "🐩", "🦭", "🦀", "🐝", "🤖", "🐘", "🐸", "🕷","🐆", "🦕", "🦁"];
+let stageEl = document.getElementById("stage")
+let fighterButton = document.getElementById("fighterButton")
+
+fighterButton.addEventListener( "click", function(){
+    let pickFirstEmoji = Math.floor(Math.random() * emojiPicker.length);
+    let pickSecondEmoji = Math.floor(Math.random() * emojiPicker.length);
+    stageEl.textContent = emojiPicker[pickFirstEmoji] +" VS "+ emojiPicker[pickSecondEmoji];
+
+    console.log("click");
+    console.log(pickFirstEmoji);
+    console.log(pickSecondEmoji);
+});
+
