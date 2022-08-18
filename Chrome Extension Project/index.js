@@ -29,14 +29,14 @@ inputButtons.addEventListener("click", function(){
     inputBox.value = "";
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
     render(myLeads);
-
 });
 
-const tabs = [{url:"https://www.google.com"}]
 tabButton.addEventListener("click", function(){
-      myLeads.push(tabs[0].url);
-      localStorage.setItem("myLeads", JSON.stringify(myLeads));
-      render(myLeads);
+    chrome.tabs.query({ active: true, currentWindow: true}, function(tabs){
+        myLeads.push(tabs[0].url);
+        localStorage.setItem("myLeads", JSON.stringify(myLeads));
+        render(myLeads);
+    });
 });
 
 deleteButton.addEventListener("dblclick", function(){
