@@ -2,6 +2,7 @@ const inputBox = document.getElementById("input-el");
 const inputButtons = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
 let deleteButton = document.getElementById("delete-btn");
+let tabButton = document.getElementById("tab-btn");
 
 let myLeads = [];
 
@@ -29,6 +30,13 @@ inputButtons.addEventListener("click", function(){
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
     render(myLeads);
 
+});
+
+const tabs = [{url:"https://www.google.com"}]
+tabButton.addEventListener("click", function(){
+      myLeads.push(tabs[0].url);
+      localStorage.setItem("myLeads", JSON.stringify(myLeads));
+      render(myLeads);
 });
 
 deleteButton.addEventListener("dblclick", function(){
