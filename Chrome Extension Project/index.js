@@ -1,6 +1,7 @@
 const inputBox = document.getElementById("input-el");
 const inputButtons = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
+let deleteButton = document.getElementById("delete-btn");
 
 // called when you set onClick="" listener in HTML Page
 
@@ -57,7 +58,9 @@ function renderLeads() {
     ulEl.innerHTML =  listItems;
 }
 
-let deleteButton = document.getElementById("delete-btn")
-deleteButton.addEventListener("click", function(){
-
+deleteButton.addEventListener("dblclick", function(){
+    localStorage.clear();
+    myLeads = [];
+    // ulEl.innerHTML = "";
+    renderLeads();
 });
