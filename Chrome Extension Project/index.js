@@ -12,10 +12,12 @@ let myLeads = [];
 
 inputButtons.addEventListener("click", function(){
     myLeads.push(inputBox.value);
+    inputBox.value = "";
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
     // console.log(inputBox.value);
     // console.log(myLeads);
     renderLeads();
-    inputBox.value = "";
+    console.log(localStorage.getItem("myLeads"));
 });
 
 

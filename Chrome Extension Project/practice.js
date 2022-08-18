@@ -63,3 +63,37 @@ const greeting = `Hey,
                   ${from}.
                   `;
 console.log(greeting);
+
+// localstorage
+
+localStorage.setItem("myLeads","www.examplelead.com");
+
+console.log(localStorage.getItem("myLeads"));
+
+key = "my Lead";
+value = "www.google.com";
+
+//sets the value
+localStorage.setItem(key, value);
+
+//get value from localstorage using key
+let link = localStorage.getItem(key);
+console.log(link);
+
+// clears localstorage
+localStorage.clear();
+
+// localstorage using an array
+
+let data = `["Hello", "Gulshankumar"]`;
+// string into an array
+data = JSON.parse(data);
+data.push("Patle");
+
+console.log(data);
+console.log(typeof data);
+
+// array into a string
+data = JSON.stringify(data);
+console.log(data);
+console.log( typeof data)
