@@ -16,8 +16,14 @@ inputButtons.addEventListener("click", function(){
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
     // console.log(inputBox.value);
     // console.log(myLeads);
+
+    let leadsFromLoacalStorage = JSON.parse(localStorage.getItem("myLeads"));
+    console.log(leadsFromLoacalStorage);
+
     renderLeads();
-    console.log(localStorage.getItem("myLeads"));
+    // console.log(localStorage.getItem("myLeads"));
+
+
 });
 
 
