@@ -153,3 +153,58 @@ console.log(Boolean(100)); // true
 console.log(Boolean(null)); //false
 console.log(Boolean([0])); //true
 console.log(Boolean(-0)); // false
+
+let greet = document.getElementById("greet-para");
+
+function greetings(message){
+    greet.textContent = message + ", Gulshankumar."
+}
+
+greetings("Good Afternoon");
+
+let namePara = document.getElementById("name-para");
+
+function welcomeToUser(name){
+    namePara.textContent = "Welcome back to the board "+ name + ".";
+}
+
+welcomeToUser("Gulshankumar");
+
+// using multiple parameter
+let paraGraph = document.getElementById("fullname-para");
+
+function fullName(surname, firstname, middlename){
+    paraGraph.textContent = surname + " " + firstname + " "+ middlename;
+
+}
+
+fullName("Patle", "Gulshankumar", "Kuwarlal");
+
+//using string literals
+let details = document.getElementById("details-para");
+
+function candidateDetails(surname, firstname, middlename, age, emoji){
+    paraGraph.textContent = ` Hello, Welcome back ${firstname} ${emoji},
+                            Your FullName is ${surname} ${firstname} ${middlename} and your age is ${age}. `;
+    
+}
+
+candidateDetails("Patle", "Gulshankumar", "Kuwarlal", 24, "😃");
+
+//              parameters
+function add(numberOne, numberTwo){
+    return numberOne + numberTwo;
+}
+
+//          arguments
+console.log(add(10,2));
+console.log(add(100,200));
+
+// passing array as an argument
+function getFirstElement(arr){
+    return arr[0];
+}
+
+let compositArray = ["Hello", 1, "Gulshankumar"];
+
+console.log(getFirstElement(compositArray));
