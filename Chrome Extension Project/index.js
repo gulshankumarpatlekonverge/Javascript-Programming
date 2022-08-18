@@ -3,64 +3,36 @@ const inputButtons = document.getElementById("input-btn");
 const ulEl = document.getElementById("ul-el");
 let deleteButton = document.getElementById("delete-btn");
 
-// called when you set onClick="" listener in HTML Page
-
-// function inputButton(){
-//     console.log("Onclick Event")
-// }
-
 let myLeads = [];
 
 let leadsFromLoacalStorage = JSON.parse(localStorage.getItem("myLeads"));
-    console.log(leadsFromLoacalStorage);
     if(leadsFromLoacalStorage){
         myLeads = leadsFromLoacalStorage;
-        renderLeads();
+        render(myLeads);
     }
+
+function render(leads) {
+    let listItems = "";
+    for(let i = 0; i < leads.length; i++){   
+       listItems += ` <li>
+            <a target = "_blank" href = "https://${leads[i]}">
+                ${leads[i]}
+            </a>
+        </li>`     
+    }
+    ulEl.innerHTML =  listItems;
+}
 
 inputButtons.addEventListener("click", function(){
     myLeads.push(inputBox.value);
     inputBox.value = "";
     localStorage.setItem("myLeads", JSON.stringify(myLeads));
-    // console.log(inputBox.value);
-    // console.log(myLeads);
+    render(myLeads);
 
-    // let leadsFromLoacalStorage = JSON.parse(localStorage.getItem("myLeads"));
-    // console.log(leadsFromLoacalStorage);
-
-    renderLeads();
-    // console.log(localStorage.getItem("myLeads"));
 });
-
-
-// for(let i = 0; i < myLeads.length; i++){
-//     // using innerHTML
-//     ulEl.innerHTML += "<li>"+ myLeads[i] + "</li>";
-
-//     // using append method
-//     // const li = document.createElement("li");
-//     // li.textContent = myLeads[i];
-//     // ulEl.append(li);
-// }
-
-function renderLeads() {
-    let listItems = "";
-    for(let i = 0; i < myLeads.length; i++){   
-    //    listItems += "<li><a target='_blank' href=https://" + myLeads[i] + ">" + myLeads[i] +"</a></li>";
-       
-        listItems += ` <li>
-            <a target = "_blank" href = "https://${myLeads[i]}">
-                ${myLeads[i]}
-            </a>
-        </li>` 
-       
-    }
-    ulEl.innerHTML =  listItems;
-}
 
 deleteButton.addEventListener("dblclick", function(){
     localStorage.clear();
     myLeads = [];
-    // ulEl.innerHTML = "";
-    renderLeads();
+    render(myLeads);
 });
