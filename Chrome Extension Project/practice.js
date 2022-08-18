@@ -96,4 +96,60 @@ console.log(typeof data);
 // array into a string
 data = JSON.stringify(data);
 console.log(data);
-console.log( typeof data)
+console.log( typeof data);
+
+//truthy and falsy value
+//  0 , false, "", null, undefined, NaN => falsy and 
+//  1, true => truthy 
+
+// null => how you as a developer signalize emptiness
+// undefined => how javascript signalize
+
+const credit = 0;
+
+if(credit > 0){
+    console.log("Let's Play");
+} else{
+    console.log("Sorry, you have no credits");
+}
+
+// null
+let myName = null;
+myName = ["Gulshankumar", "Navin"];
+
+if(myName){  //truthy value
+    console.log(myName);
+}
+
+myName =null;
+
+if(myName){ // falsy value
+    console.log(myName);
+} else{
+        console.log("Nothing");  
+}
+
+// undefined
+
+let currentViewers;
+
+console.log(currentViewers); //undefined
+
+let currentViewer = ["james"];
+
+console.log(currentViewer); //james 
+
+let trueorfalse = Boolean("hello"); // true
+
+console.log(trueorfalse);
+
+let falseortrue = Boolean(""); // false
+
+console.log(falseortrue);
+
+console.log(Boolean("")); // false
+console.log(Boolean("0")); //true
+console.log(Boolean(100)); // true
+console.log(Boolean(null)); //false
+console.log(Boolean([0])); //true
+console.log(Boolean(-0)); // false
