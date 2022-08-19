@@ -118,3 +118,18 @@ function renderImages(){
 }
 
 renderImages();
+
+// Rounding Number
+const totalPrice = 420.69235632455;
+const btn = document.getElementById("buy-btn");
+btn.textContent = `Buy €${ totalPrice.toPrecision(5) }`;
+
+const btn2 = document.getElementById("purchase-btn");
+btn2.textContent = `Buy €${ totalPrice.toFixed(2)}`;
+
+// converting string in a number
+const price = "420.69235632455";
+const btn3 = document.getElementById("send-btn");
+// btn3.textContent = `Buy €${ Number(totalPrice).toFixed(2)}`;
+let priceInFloat = parseFloat(price);
+btn3.textContent = `Send RS.${ priceInFloat.toFixed(2)}`;
